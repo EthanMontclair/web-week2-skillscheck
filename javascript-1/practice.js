@@ -93,13 +93,28 @@ const me = {
 
 // Create a function called 'bigOrSmall' that takes in one parameter, 'arr', which will be an array of numbers. Inside of the bigOrSmall function, create a new array called 'answers'. Then, loop over the passed in arr parameter, and check to see if the number in the array is GREATER than 100. If it is, push 'big' as a string to the answers array. If the number is LESS than or EQUAL to 100, push 'small' as a string to the answers array. Return the answers array inside of the function.
 
-// Code here
+function bigOrSmall(arr){
+	const answers = []
+	for(let i = 0; i < arr.length; i++){
+	  if(arr[i] > 100){
+		answers.push('big')
+	  } else {
+		answers.push('small')
+	  }
+	} return answers
+  }
 
 //////////////////PROBLEM 13////////////////////
 
 // Create a function called 'arrayReverser' that takes in one parameter, 'arr'. Inside of arrayReverser, create an empty array called 'reversed'. Using a for loop, loop over the passed in array IN REVERSE (this means your counter should decrement), and then add each item to the 'reversed' array variable you created. Finally, return the 'reversed' array variable. 
 
-//Code Here
+function arrayReverser(arr){
+	const reversed = []
+	for(let e = arr.length - 1; e >= 0; e--){
+	  reversed.push(arr[e])
+	}
+	return reversed
+  }
 
 //////////////////PROBLEM 14 - 18 Setup////////////////////
 
@@ -111,13 +126,13 @@ const myNumbers = [3, 55, 788, 2, 1]
 
 // First, use .map to create a new array that doubles each number. Call the new array 'doubled'.
 
-// Code Here
+let doubled = myNumbers.map(i => i *= 2);
 
 //////////////////PROBLEM 15////////////////////
 
 // Now, use .filter to create a new array containing any numbers that are greater than 100. Call the new array 'filtered'. 
 
-// Code Here
+const filtered = myNumbers.filter(num => num > 100)
 
 //////////////////PROBLEM 16////////////////////
 
@@ -129,7 +144,6 @@ const myNumbers = [3, 55, 788, 2, 1]
 
 // Finally, use .forEach to find the index of each item in the array. To begin, create an empty array called 'myNumbersIndex'. Then, use forEach to push each item's index from the myNumbers array into the newly created myNumbersIndex array. 
 
-// Code Here
 
 //////////////////PROBLEM 18////////////////////
 
